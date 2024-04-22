@@ -12,6 +12,9 @@
     //3.添加联系人
     $contacts['xiaoli'] = ["email" =>"115@example.com", "phone" => "1234321"];
 
-    
+    //4.删除联系人
+    unset($contacts['xiaohua']);
+
+    //
         
 ?>
