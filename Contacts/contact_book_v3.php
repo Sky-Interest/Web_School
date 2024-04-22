@@ -29,6 +29,27 @@
         $name = $_GET['delete'];
         unset($_SESSION['contacts'][$name]);
     }
-    
+
     
 ?>
+
+<!-- HTML表单优化 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系人簿</title>
+</head>
+<body>
+    <h2>添加联系人</h2>
+    <form method="POST">
+        <label for="name">姓名:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">电子邮件:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">电话:</label>
+        <input type="text" id="phone" name="phone" required>
+        <button type="submit" name="addContact">添加联系人</button>
+    </form>
+</body>
+</html>
