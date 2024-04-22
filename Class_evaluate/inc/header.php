@@ -20,13 +20,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.html">首页</a>
+                        <a class="nav-link" href="../index.php">首页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./reviews.html">评价</a>
+                        <a class="nav-link" href="../reviews.php">评价</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./about.html">关于我们</a>
+                        <a class="nav-link" href="../about.php">关于我们</a>
                     </li>
                 </ul>
             </div>
