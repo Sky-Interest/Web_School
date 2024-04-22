@@ -15,6 +15,8 @@
     //4.删除联系人
     unset($contacts['xiaohua']);
 
-    //
+    //5.显示所有联系人
+
+    displayContact($contacts);
         
 ?>
