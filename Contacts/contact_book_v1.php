@@ -20,3 +20,28 @@
     displayContact($contacts);
         
 ?>
+<!-- <html></html> -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>联系⼈簿</title>
+</head>
+<body>
+<h2>添加联系⼈</h2>
+<form action="contact_book.php" method="post">
+<label for="name">姓名:</label><br>
+<input type="text" id="name" name="name" required></
+ 
+<label for="email">电⼦邮箱:</label><br>
+<input type="email" id="email" name="email" required>
+ 
+<label for="phone">电话:</label><br>
+<input type="text" id="phone" name="phone" required>
+ 
+<input type="submit" value="添加联系⼈">
+</form>
+</body>
+</html>
+
+
