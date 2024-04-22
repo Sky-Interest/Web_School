@@ -24,4 +24,11 @@
             $_SESSION['contacts'][$name] = ['email' => $email, 'phone' => $phone];
         }
     }
+    //4.删除联系人的处理
+    if (isset($_GET['delete'])) {
+        $name = $_GET['delete'];
+        unset($_SESSION['contacts'][$name]);
+    }
+    
+    
 ?>
