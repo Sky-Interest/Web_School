@@ -15,4 +15,13 @@
             echo " <a href='?delete=" . urlencode($name) . "'>删除</a></p>";
         }
     }
+    //3.处理添加联系人的信息
+    if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['addContact'])) {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        if (!empty($name) && !empty($email) && !empty($phone)) {
+            $_SESSION['contacts'][$name] = ['email' => $email, 'phone' => $phone];
+        }
+    }
 ?>
