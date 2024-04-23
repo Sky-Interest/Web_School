@@ -21,4 +21,4 @@
         </div>
     </main>
 
-<?php include './footer.php'; ?>
+<?php include 'inc/footer.php'; ?>
