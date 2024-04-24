@@ -1,3 +1,6 @@
+
+<? include 'config/db.php' ?>
+
 <!DOCTYPE html>
 <html lang="zh">
 

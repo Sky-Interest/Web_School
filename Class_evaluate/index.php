@@ -1,7 +1,7 @@
 <?php include 'inc/header.php';?>
     <main>
         <div class="container d-flex flex-column align-items-center">
-            <img src="/course-review-app/img/logo.png" class="w-25 mb-3" alt="">
+            <img src="./img/1335755.jpeg" class="w-25 mb-3" alt="">
             <h2>课程评价</h2>
             <p class="lead text-center">为你所上的课程留下评价</p>
             <form action="" class="mt-4 w-75">
