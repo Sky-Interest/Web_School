@@ -1,5 +1,31 @@
 <?php include 'inc/header.php';?>
 
+
+<?php
+    $reviews = [
+        [
+            'id' => 1,
+            'name'=> '张三',
+            'course_name'=> 'test_course',
+            'context'=> 'test_context',
+            'date'=> 'test_date',
+        ],
+        [
+            'id' => 2,
+            'name'=> '张三',
+            'course_name'=> 'test_course',
+            'context'=> 'test_context',
+            'date'=> 'test_date',
+        ],
+        [
+            'id' => 3,
+            'name'=> '张三',
+            'course_name'=> 'test_course',
+            'context'=> 'test_context',
+            'date'=> 'test_date',
+        ]
+    ]
+?>
     <main>
         <div class="container d-flex flex-column align-items-center">
             <h2>课程评价</h2>
