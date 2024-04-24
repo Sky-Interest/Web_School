@@ -38,7 +38,8 @@
         <?php foreach($reviews as $review):?>
         <div class="card my-3" style="width: 18rem;">
             <div class="card-body">
-                这是一门非常实用的课程，深入浅出地介绍了编程基础。老师讲解清晰，配套资料丰富，非常推荐给编程新手。
+                <!-- 引用context数据 -->
+                <?php echo $review ['context'];?>
             </div>
         </div>
         <?php endforeach; ?>
