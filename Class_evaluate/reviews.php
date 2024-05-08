@@ -15,14 +15,14 @@
             ],
             [
                 'id' => 2,
-                'name' => '张三',
+                'name' => '李四',
                 'course_name' => 'test_course',
                 'context' => 'test_context',
                 'date' => 'test_date',
             ],
             [
                 'id' => 3,
-                'name' => '张三',
+                'name' => '王五',
                 'course_name' => 'test_course',
                 'context' => 'test_context',
                 'date' => 'test_date',
@@ -49,7 +49,7 @@
                 <?php echo $review ['context'];?>
                 "
                 <div class="text-secondary mt-2">
-                    来自<?php echo $reviews['name']; ?>
+                    来自<?php echo $review['name']; ?>
                 </div>
                 
             </div>
