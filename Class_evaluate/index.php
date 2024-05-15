@@ -21,11 +21,21 @@ if (isset($_POST['submit'])) {
     } else {
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
+    if (empty($_POST['course'])) {
+        $courseNameErr = "课程名称为必填项！";
+    } else {
+        $courseName = filter_input(INPUT_POST, 'course', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    }
+    if (empty($_POST['body'])) {
+        $contentErr = "评价内容为必填项！";
+    } else {
+        $content = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    }
 };
 
 
-echo $nameErr;
-echo $name;
+// echo $nameErr;
+// echo $name;
 
 
 ?>
@@ -45,16 +55,26 @@ echo $name;
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">你的邮箱</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="请输入你的邮箱">
+                <input type="email" class="form-control <?php echo $emailErr ? 'is-invalid' : null; ?>" id="email" name="email" placeholder="请输入你的邮箱">
+                <div class="invalid-feedback">
+                    <?php echo $emailErr; ?>
+                </div>
             </div>
             <div class="mb-3">
                 <label for="course" class="form-label">课程名称</label>
-                <input type="text" class="form-control" id="course" name="course" placeholder="请输入课程名称">
+                <input type="text" class="form-control <?php echo $courseNameErr ? 'is-invalid' : null; ?>" id="course" name="course" placeholder="请输入课程名称">
+                <div class="invalid-feedback">
+                    <?php echo $courseNameErr; ?>
+                </div>
             </div>
             <div class="mb-3">
                 <label for="body" class="form-label">评价内容</label>
-                <textarea class="form-control" id="body" name="body" rows="4" placeholder="请输入你的评价"></textarea>
+                <textarea class="form-control <?php echo $contentErr ? 'is-invalid' : null; ?> " id="body" name="body" rows="4" placeholder="请输入你的评价"></textarea>
+                <div class="invalid-feedback">
+                    <?php echo $contentErr; ?>
+                </div>
             </div>
+
             <div class="mb-3">
                 <input type="submit" name="submit" value="提交评价" class="btn btn-dark w-100">
             </div>
