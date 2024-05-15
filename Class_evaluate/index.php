@@ -31,6 +31,20 @@ if (isset($_POST['submit'])) {
     } else {
         $content = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
+
+    if (empty($nameErr) && empty($emailErr) && empty($courseNameErr) && empty($contentErr)) {
+        // 添加到数据库
+        $sql = "INSERT INTO review (name, email, course_name, content) VALUES('$name', '$email', '$courseName', '$content')";
+
+        if (mysqli_query($conn, $sql)) {
+            // 成功
+            header('Location: reviews.php');
+        } else {
+            // 错误
+            echo "出错：" . mysqli_error($conn);
+        }
+    }
+
 };
 
 
