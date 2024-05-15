@@ -6,6 +6,18 @@ $nameErr = $emailErr = $courseNameErr = $contentErr = '';
 
 if (isset($_POST['submit'])) {
 
+if(empty($_POST['name'])){
+    $nameErr = '姓名为必填项！';
+}else{
+    $name = filter_input(INPUT_POST ,'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+}
+
+if(empty($_POST['email'])){
+    $emailErr = '邮箱为必填项！';
+}else{
+    $email = filter_input(INPUT_POST ,'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+}
+
 }
 
 ?>
