@@ -6,19 +6,22 @@ $nameErr = $emailErr = $courseNameErr = $contentErr = '';
 
 if (isset($_POST['submit'])) {
 
-if(empty($_POST['name'])){
-    $nameErr = '姓名为必填项！';
-}else{
-    $name = filter_input(INPUT_POST ,'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-}
+    if (empty($_POST['name'])) {
+        $nameErr = "姓名为必填项！";
+    } else {
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    }
 
-if(empty($_POST['email'])){
-    $emailErr = '邮箱为必填项！';
-}else{
-    $email = filter_input(INPUT_POST ,'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-}
+    if (empty($_POST['email'])) {
+        $emailErr = "邮箱为必填项！";
+    } else {
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    }
 
 }
+// echo $nameErr;
+// echo $name;
+
 
 ?>
 
@@ -27,10 +30,10 @@ if(empty($_POST['email'])){
         <img src="./img/1335755.jpeg" class="w-25 mb-3" alt="">
         <h2>课程评价</h2>
         <p class="lead text-center">为你所上的课程留下评价</p>
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>"methon="POST" class="mt-4 w-75">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" methon="POST" class="mt-4 w-75">
             <div class="mb-3">
                 <label for="name" class="form-label">你的姓名</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="请输入你的姓名">
+                <input type="text" class="form-control is-invalid" id="name" name="name" placeholder="请输入你的姓名">
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">你的邮箱</label>
