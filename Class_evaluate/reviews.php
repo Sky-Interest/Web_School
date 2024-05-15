@@ -5,33 +5,10 @@
 <main>
     <div class="container d-flex flex-column align-items-center">
         <?php
-        // $reviews = [
-        //     [
-        //         'id' => 1,
-        //         'name' => '张三',
-        //         'course_name' => 'test_course',
-        //         'context' => 'test_context',
-        //         'date' => 'test_date',
-        //     ],
-        //     [
-        //         'id' => 2,
-        //         'name' => '李四',
-        //         'course_name' => 'test_course',
-        //         'context' => 'test_context',
-        //         'date' => 'test_date',
-        //     ],
-        //     [
-        //         'id' => 3,
-        //         'name' => '王五',
-        //         'course_name' => 'test_course',
-        //         'context' => 'test_context',
-        //         'date' => 'test_date',
-        //     ]
-        // ]
-
         $sql = 'SELECT * FROM review';
         $result = mysqli_query($conn, $sql);
         $reviews = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        // echo $reviews;
         ?>
 
         <?php if (empty($reviews)) : ?>
@@ -50,7 +27,7 @@
             <div class="card-body text-center">
                 <!-- 引用context数据 -->
                 "
-                <?php echo $review ['context'];?>
+                <?php echo $review ['content'];?>
                 "
                 <div class="text-secondary mt-2">
                     来自<?php echo $review['name']; ?>

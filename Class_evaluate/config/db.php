@@ -1,8 +1,9 @@
 <?php
 
 define('DB_HOST','localhost');
-define('DB_USER','interest');
-define('DB_PASS','123456');
+// define('DB_USER','interest');
+define('DB_USER','root');
+define('DB_PASS','');
 define('DB_NAME','review_app');
 
 //新建连接
@@ -15,5 +16,9 @@ if ($conn->connect_error) {
 }else{
 echo"连接成功！";
 }
+$sql = 'SELECT * FROM review';
+        $result = mysqli_query($conn, $sql);
+        $reviews = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        // echo $reviews;
 
 ?>
